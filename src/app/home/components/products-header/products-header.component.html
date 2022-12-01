@@ -1,0 +1,51 @@
+<mat-card class="flex mb-4 max-width-container">
+
+    <div class="flex justify-between p-2">
+
+        <div class="flex items-center">
+
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+
+                <mat-button-toggle (click)="onSortUpdated('dsc')">
+
+                    <mat-icon class="icon-display">arrow_upward</mat-icon>
+
+                </mat-button-toggle>
+
+                <mat-button-toggle (click)="onSortUpdated('asc')">
+
+                    <mat-icon class="icon-display">arrow_downward</mat-icon>
+
+                </mat-button-toggle>
+
+            </mat-button-toggle-group>
+
+        </div>
+
+        <div class="flex items-center">
+
+            <mat-button-toggle class="mr-4" (click)="onChangeFilter()">
+                Studentenbier
+            </mat-button-toggle>
+
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="first">
+
+                <mat-button-toggle value="first" (click)="onColumnsUpdated(1)">
+
+                    <mat-icon class="icon-display">view_list</mat-icon>
+
+                </mat-button-toggle>
+
+                <mat-button-toggle (click)="onColumnsUpdated(5)">
+
+                    <mat-icon class="icon-display">view_comfy</mat-icon>
+
+                </mat-button-toggle>
+
+            </mat-button-toggle-group>
+
+        </div>
+
+    </div>
+
+</mat-card>

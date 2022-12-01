@@ -1,0 +1,28 @@
+<mat-drawer-container [autosize]="true" class="min-h-full mx-auto border-x">
+
+  <mat-drawer-content opened class="p-6">
+
+    <div class="max-width-container">
+
+      <app-products-header (changeFilter)="onChangeFilter($event)" (columCountChange)="onColumnsOnChange($event)"
+        (sortChange)="onSortChange($event)"></app-products-header>
+
+      <mat-grid-list gutterSize="16" [cols]="columns" [rowHeight]="rowHeight">
+
+        <div *ngFor="let product of formattedProducts">
+
+          <mat-grid-tile *ngIf="checkPrice(product)">
+
+            <app-product [product]="product" [fullWidth]="columns === 1"></app-product>
+
+          </mat-grid-tile>
+
+        </div>
+
+      </mat-grid-list>
+
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>

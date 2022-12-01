@@ -1,0 +1,15 @@
+.toolbar {
+    color: white;
+    background-color: #a50a50;
+}
+
+.max-width-container {
+    max-width: 1260px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-display {
+    transform: scale(2);
+}
